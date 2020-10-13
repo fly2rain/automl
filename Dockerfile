@@ -6,9 +6,8 @@ MAINTAINER Feiyun Zhu
 
 RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
-       python3-dev python3-pip python3-setuptools libgtk2.0-dev git g++ wget make vim gcc
-
-RUN pip3 install --upgrade setuptools pip
+       python3-dev python3-pip python3-setuptools libgtk2.0-dev git g++ wget make vim gcc \
+    && pip3 install --upgrade setuptools pip
 
 FROM base as runtime
 

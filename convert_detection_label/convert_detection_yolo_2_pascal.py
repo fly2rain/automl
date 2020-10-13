@@ -2,6 +2,7 @@ import os
 import xml.etree.ElementTree as ET
 import random
 import PIL.Image
+from .utils_fyzhu import OsProcess, GetFileLists
 
 input_dataset_path = 'ItemRecognition'
 input_datasets = os.listdir(input_dataset_path)
