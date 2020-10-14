@@ -2,4 +2,10 @@ __pycache__
 .DS_Store
 .vscode
 tmp
-.ropeproject
+*.ropeproject
+*.jpg
+*.png
+*.tfrecord
+efficientdet/tfrecord
+efficientdet/testdata
+efficientdet/efficientdet-d0
