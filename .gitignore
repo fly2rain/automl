@@ -5,5 +5,7 @@ tmp
 *.ropeproject
 *.jpg
 *.png
+#*.xml
+#*.txt
 *.tfrecord
-./dataset
+dataset
