@@ -2,10 +2,10 @@ __pycache__
 .DS_Store
 .vscode
 tmp
+dataset
 *.ropeproject
 *.jpg
 *.png
-#*.xml
-#*.txt
+*.xml
+*.txt
 *.tfrecord
-dataset
