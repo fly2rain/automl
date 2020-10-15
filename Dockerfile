@@ -1,9 +1,9 @@
-# Base Image Python3.7 Stretch
 #FROM python:3.7-slim AS base
 #ARG cuda_version=11.1
 #ARG cudnn_version=7
-#FROM nvidia/cuda:${cuda_version}-cudnn${cudnn_version}-devel
-FROM nvidia/cuda:10.0-cudnn7-devel-ubuntu18.04 AS base
+#FROM nvidia/cuda:10.1-cudnn7-devel-ubuntu16.04 AS base
+#FROM nvidia/cuda:11.0-cudnn8-runtime-ubuntu16.04 AS base
+FROM nvidia/cuda:10.1-cudnn8-devel-ubuntu18.04
 
 # Maintainer Information:
 MAINTAINER Feiyun Zhu
@@ -11,17 +11,17 @@ MAINTAINER Feiyun Zhu
 RUN apt-get update -y \
     && apt-get install -y apt-utils \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
-       python3-dev python3-pip python3-setuptools libgtk2.0-dev git g++ wget make vim \
+       python3-dev python3-pip python3-setuptools libgtk2.0-dev git g++ wget make vim nano \
     && pip3 install --upgrade setuptools pip
 #    && pip3 install gitsome
 
-FROM base as runtime
-
+#FROM base as runtime
 # Set the Working Directory to /app
-WORKDIR /app
+WORKDIR ~/app
 
 # Copy the current directory contents into the container at /app
-COPY . /app
+COPY  ./   /app
+# COPY  /media/fyzhu/data2T_1/backup_dataset_public/voc2012  /app/dataset/
 
 # Remove .env in host
 RUN rm -rf .env

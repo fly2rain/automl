@@ -6,6 +6,4 @@ tmp
 *.jpg
 *.png
 *.tfrecord
-efficientdet/tfrecord
-efficientdet/testdata
-efficientdet/efficientdet-d0
+./dataset
