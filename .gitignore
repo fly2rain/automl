@@ -2,10 +2,12 @@ __pycache__
 .DS_Store
 .vscode
 tmp
-dataset
 *.ropeproject
 *.jpg
 *.png
 *.xml
 *.txt
+*.tar.gz
 *.tfrecord
+dataset
+efficientdet/efficientdet-d0
